@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de monedas nacional</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h5>Conversor de monedas nacional</h5>
+            </div>
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="d-flex flex-column flex-grow-1 me-3">
+                  <label class="fw-bold mb-1">Pesos CLP</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="CLP" placeholder="Ingresa el monto en pesos chilenos" aria-label="Ingresa el monto en pesos chilenos" aria-describedby="CLP">
+                  </div>
+                </div>
+                <div class="d-flex flex-column">
+                  <label class="fw-bold mb-1">Moneda a convertir</label>
+                  <select id="selectMoney" class="form-select" placeholder="Ingresa la moneda a convertir" aria-label="Ingresa la moneda a convertir" aria-describedby="selectMoney">
+                    <option value="uf" id="uf">UF</option>
+                    <option value="dolar" id="dolar">Dólar</option>
+                    <option value="euro" id="dolar">Euro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button id="convert" class="btn btn-primary">
+                  Convertir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="result" class="fs-4 fw-bold d-flex justify-content-center"></div>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="errorModalLabel">Error</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="errorMessage"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f5bdbb41e0.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
